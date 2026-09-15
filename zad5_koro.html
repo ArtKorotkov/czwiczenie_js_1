@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Korotkov 2P</title>
+    <style>
+        h1 {
+            color: red;
+            text-align: center;
+        }
+        div {
+            text-align: center;
+        }
+        form {
+            margin: 25px;
+        }
+    </style>
+    <script>
+        function WinOpen_korotkov_1()
+            {
+                window.open("grafika_1_koro.html","okienko_z1","toolbar=no,directories=no,menubar=no,height=370,width=320,top=550,left=260");
+            }
+        function WinOpen_korotkov_2()
+            {
+                window.open("grafika_2_koro.html","okiemko_z2","toolbar=no, directories=no, menubar=no, height=370, width=320, top=300, left=600");
+            }
+        function WinOpen_korotkov_3()
+            {
+                window.open("grafika_3_koro.html","okienko_z3","toolbar=no,directories=no,menubar=no,height=370,width=320,top=200,left=940");
+            }
+        function WinOpen_korotkov_4()
+            {
+                window.open("grafika_4_koro.html","okienko_z4","toolbar=no,directories=no,menubar=no,height=370,width=320,top=100,left=1280");
+            }
+        function okno_zamknij()
+            {
+                
+               window.close();   
+            }
+    </script>
+</head>
+<body>
+    <h1> Wykonał: Artem Korotkov mój numer w dzienniku: 7, czyli <br>
+        mam układ [(7) mod 4 = 3] uklad 3</h1>
+    <div>
+    <form>
+        <input type="button" value="grafika 1" onclick="WinOpen_korotkov_1(' ')">
+        <input type="button" value="grafika 2" onclick="WinOpen_korotkov_2(' ')">
+        <input type="button" value="grafika 3" onclick="WinOpen_korotkov_3(' ')">
+        <input type="button" value="grafika 4" onclick="WinOpen_korotkov_4(' ')">
+
+    </form>
+    <form>
+        <input type="button" value="zamknij okno" onclick="okno_zamknij()"/>
+    </form>
+    </div>
+</body>
+</html>

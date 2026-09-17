@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zadanie 6 Korotkov</title>
+    <style>
+        *{
+            font-family: Arial;
+        }
+        h1{
+            font-weight: bold;
+        }
+        ol{
+            font-weight: bold;
+            font-size: 20px;
+        }
+        ul, p{
+            font-weight: normal;
+            list-style-type: disc;
+        }
+        #lista_numerowany{
+            list-style-type: decimal;
+        }
+    </style>
+</head>
+<body>
+    <ol>
+        <li>
+            Rodzaje okienek,
+            <ul>
+                <li>Okienko <b>alert</b> – wyświetlająca okienko dialogowe z informacją i przyciskiem OK.</li>
+                <li>Okienko <b>prompt</b> – generująca okno, w którym użytkownik może wpisać wartość, zwracaną <br>następnie do programu.</li>
+                <li>Okienko <b>confirm</b> służy do tego, aby użytkownik coś potwierdził (stąd nazwa confirm).</li>
+            </ul>
+        </li>
+        <li>
+            Konwersji liczb.
+            <p>Wczytanie zmiennej z użyciem <b>prompt</b> wykonywane jest jako ciąg znaków dlatego konieczna jest <br>
+            konwersji z ciągu znaków na wartości liczbowe aby wykonywac obliczenia. <br>
+            <u>parseFloat(zmienna)</u> - konwersja zmiennej do typu float <br>
+            <u>parseInt(zmienna)</u> - konwersja zmiennej do typu int (liczbowego) <br>
+            <u>toString(zmienna)</u> - konwersja zmiennej do typu łańcuchowego <br></p>
+        </li>
+        <li>
+            Przy nadawaniu nazw zmiennym należy przestrzegać pewnych zasad: 
+            <ul id="lista_numerowany">
+                <li>Nazwa zmiennej musi się zaczynać od litery, znaku "$" lub "_", może zawierać tylko litery (bez <br>
+                polskich znaków), cyfry oraz "$" i "_". <br>
+                <u>Poprawne nazwy zmiennych</u>: zmienna1, $wynik, _rozmiar, wynik1, Rekord, $_gracz <br>
+                <u>Błędne nazwy zmiennych</u>: 1zmienna, wynik gry, wysokosc&szerokosc, wynik.rekord, &gracz, <br>
+                wysokość, imie+nazwisko.</li>
+                <li>Wielkość liter ma znaczenie.<br>
+                <u>Rekord i rekord</u> to dwie różne zmienne! Jest to bardzo częsta przyczyna błędów w kodzie <br>
+                początkujących programistów.</li>
+                <li>Należy nie używać słów kluczowych JavaScript jako nazw zmiennych.</li>
+            </ul>
+        </li>
+        <li>
+            Omów typy zmiennych w Javascript.
+            <p>W JavaScript nie ma możliwości definiowania różnych typów zmiennych tak jak w C++, typy <br>
+            zmiennych są definiowane w trakcie ich przypisywania. <br>
+            Podstawowe zmienne liczbowe w JavaScript to: <br>
+            Number &rarr; Typ liczbowy </p>
+            <ul>
+                <li>zmienna całkowite</li>
+                <li>zmienna zmiennoprzecinkowe</li>
+            </ul>
+            <p>String &rarr; Typ tekstowy <br>
+            Boolean &rarr; Typ logiczny
+            Null &rarr; Pusta zawartość
+            Undefined &rarr; Typ niezidentyfikowany</p>
+        </li>
+    </ol>
+    
+</body>
+</html>

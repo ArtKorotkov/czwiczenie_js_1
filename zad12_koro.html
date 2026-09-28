@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zadanie 12 Korotkov</title>
+</head>
+<body>
+    <div style="color:green;font-size:37px;">
+        <script language="JavaScript">
+            // Artem Korotkov 2P 24.09.2026
+            // Zadanie 12
+            var D1_kor=prompt("D1>=D2 D1=","");
+            var D2_kor=prompt("D1>=D2 D2=","");
+            var G1_kor=prompt("1<=G1,G2<=24 G1=","");
+            var G2_kor=prompt("1<=G1,G2<=24 G2=","");
+            var sekund;
+            var a=parseFloat(D1_kor);
+            var b=parseFloat(D2_kor);
+            var c=parseFloat(G1_kor);
+            var d=parseFloat(G2_kor);
+            sekund=((a-b)*24*60*60)+((c-d)*60*60);
+            document.write("Ilość sekund między dniami "+a+" i "+b+" = "+sekund+"<br>");
+            function okno_zamknij_korotkov()
+                {
+                    window.close()
+                }
+        </script>
+    </div>
+    <input type="button" value="zamknij okno" onclick="okno_zamknij_korotkov()"/>
+</body>
+</html>

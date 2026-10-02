@@ -15,10 +15,13 @@
         
         document.write("wczytane liczby:  A="+liczba1_kor+"  B="+liczba2_kor+"<br>");
 
+        var obliczenia_kor = (parseFloat(liczba1_kor)**3) + (3*((parseFloat(liczba1_kor)**2)*(parseFloat(liczba2_kor)))) 
+            + (3*(parseFloat(liczba1_kor)) *(parseFloat(liczba2_kor)**2)) + (parseFloat(liczba2_kor)**3);
 
-        document.write("("+liczba1_kor+"+"+liczba2_kor+")^3 = "+liczba1_kor+"^3 + 3*(("+liczba1_kor+")^2)*("+liczba2_kor+") + 3*("+liczba1_kor+")*(("+liczba2_kor+")^2 + "+liczba2_kor+"^3 = "
-            +(parseFloat(liczba1_kor) **3)+" + "+(3*((parseFloat(liczba1_kor)**2)*(parseFloat(liczba2_kor))))+" + "+(3*(parseFloat(liczba1_kor))*(parseFloat(liczba2_kor)**2))+" + "+(parseFloat(liczba2_kor)**3)
-        );
+        document.write("("+liczba1_kor+"+"+liczba2_kor+")^3 = "+liczba1_kor+"^3 + 3*(("+liczba1_kor+")^2)*("+liczba2_kor
+            +") + 3*("+liczba1_kor+")*(("+liczba2_kor+")^2 + "+liczba2_kor+"^3 = "+(parseFloat(liczba1_kor) **3)+" + "
+            +(3*((parseFloat(liczba1_kor)**2)*(parseFloat(liczba2_kor))))+" + "+(3*(parseFloat(liczba1_kor))
+            *(parseFloat(liczba2_kor)**2))+" + "+(parseFloat(liczba2_kor)**3)+" = "+ obliczenia_kor);
 
     </script>
 </body>

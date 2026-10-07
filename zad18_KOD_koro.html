@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zadanie 18 kod Korotkov</title>
+    <script>
+        function okno_zamknij()
+            {
+                window.close()
+            }
+    </script>
+</head>
+<body>
+    <textarea cols="90" rows="50">
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Zadanie 18 Korotkov</title>
+    <script>
+        function okno_zamknij_korotkov() {
+            window.close();
+        }
+    </script>
+    <style>
+        body { font-family: Arial; }
+        div { color: navy; font-size: 30px; }
+    </style>
+</head>
+<body>
+    <div>
+        <script language="JavaScript">
+            var a_kor = parseFloat(prompt("a=", ""));
+            var b_kor = parseFloat(prompt("b=", ""));
+
+            function suma_kor(a, b) {
+                return a + b;
+            }
+            function odejmowanie_kor(a, b) {
+                return a - b;
+            }
+            function mnozenie_kor(a, b) {
+                return a * b;
+            }
+            function od_kwadratu_kor(a, b) {
+                return [a * a, b * b];
+            }
+            function reszta_z_dzielenia_a_przez_b_kor(a, b) {
+                return a % b;
+            }
+
+            document.write("suma = " + suma_kor(a_kor, b_kor) + "<br>");
+            document.write("odejmowanie = " + odejmowanie_kor(a_kor, b_kor) + "<br>");
+            document.write("mnożenie = " + mnozenie_kor(a_kor, b_kor) + "<br>");
+            var kwadraty = od_kwadratu_kor(a_kor, b_kor);
+            document.write("a^2 = " + kwadraty[0] + ", b^2 = " + kwadraty[1] + "<br>");
+            document.write("reszta z dzielenia " + a_kor + " przez " + b_kor + " = " 
+            + reszta_z_dzielenia_a_przez_b_kor(a_kor, b_kor) + "<br>");
+        </script>
+    </div>
+    <input type="button" value="zamknij okno" onclick="okno_zamknij_korotkov()">
+</body>
+</html>
+    </textarea>
+    <input type="button" value="zamknij okno" onclick="okno_zamknij()"/>
+</body>
+</html>

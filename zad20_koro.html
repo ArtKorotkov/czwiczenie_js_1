@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Zadanie 20 Korotkov</title>
+    <script type="text/javascript">
+        function AB_kor() {
+            var xa = parseFloat(document.getElementById('xa_kor').value);
+            var ya = parseFloat(document.getElementById('ya_kor').value);
+            var xb = parseFloat(document.getElementById('xb_kor').value);
+            var yb = parseFloat(document.getElementById('yb_kor').value);
+            var ab = Math.sqrt(Math.pow(xa - xb, 2) + Math.pow(ya - yb, 2));
+            document.getElementById('wynik').innerHTML = "Długość boku AB = " + ab.toFixed(2);
+        }
+        function BC_kor() {
+            var xb = parseFloat(document.getElementById('xb_kor').value);
+            var yb = parseFloat(document.getElementById('yb_kor').value);
+            var xc = parseFloat(document.getElementById('xc_kor').value);
+            var yc = parseFloat(document.getElementById('yc_kor').value);
+            var bc = Math.sqrt(Math.pow(xb - xc, 2) + Math.pow(yb - yc, 2));
+            document.getElementById('wynik').innerHTML = "Długość boku BC = " + bc.toFixed(2);
+        }
+        function AC_kor() {
+            var xa = parseFloat(document.getElementById('xa_kor').value);
+            var ya = parseFloat(document.getElementById('ya_kor').value);
+            var xc = parseFloat(document.getElementById('xc_kor').value);
+            var yc = parseFloat(document.getElementById('yc_kor').value);
+            var ac = Math.sqrt(Math.pow(xa - xc, 2) + Math.pow(ya - yc, 2));
+            document.getElementById('wynik').innerHTML = "Długość boku AC = " + ac.toFixed(2);
+        }
+        function okno_zamknij_korotkov() { window.close(); }
+    </script>
+</head>
+<body>
+    <h2>Obliczanie długości boków trójkąta</h2>
+    <form>
+        A: xa = <input type="text" id="xa_kor" size="5"> ya = <input type="text" id="ya_kor" size="5"><br><br>
+        B: xb = <input type="text" id="xb_kor" size="5"> yb = <input type="text" id="yb_kor" size="5"><br><br>
+        C: xc = <input type="text" id="xc_kor" size="5"> yc = <input type="text" id="yc_kor" size="5"><br><br>
+        <input type="button" value="Oblicz AB" onclick="AB_kor()">
+        <input type="button" value="Oblicz BC" onclick="BC_kor()">
+        <input type="button" value="Oblicz AC" onclick="AC_kor()"><br><br>
+    </form>
+    <div id="wynik" style="color:red; font-size:20px;"></div>
+    <input type="button" value="zamknij okno" onclick="okno_zamknij_korotkov()">
+</body>
+</html>

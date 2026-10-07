@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zadanie 19 kod Korotkov</title>
+    <script>
+        function okno_zamknij()
+            {
+                window.close()
+            }
+    </script>
+</head>
+<body>
+    <textarea cols="100" rows="33">
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Zadanie 19 Korotkov</title>
+    <script type="text/javascript">
+        function Pole_kor() {
+            var a_kor = parseFloat(document.getElementById('długosc').value);
+            var b_kor = a_kor * a_kor;
+            document.getElementById("nazwa").innerHTML = "Pole kwadratu= " 
+            + b_kor.toFixed(2) + " cm^2";
+        }
+        function obwod_kor() {
+            var a_kor = parseFloat(document.getElementById('długosc').value);
+            var b_kor = 4 * a_kor;
+            document.getElementById("nazwa").innerHTML = "Obwód kwadratu= " 
+            + b_kor.toFixed(2) + " cm";
+        }
+        function okno_zamknij_korotkov() {
+            window.close();
+        }
+    </script>
+</head>
+<body>
+    <h1>Wszystko o KWADRACIE</h1><br><br>
+    Podaj długość boku: <input type="text" id="długosc" value="podaj długość"> cm<br><br><br>
+    <input type="button" name="pole" value="Oblicz pole" onclick="Pole_kor()"><br><br>
+    <input type="button" name="obwod" value="Oblicz obwod" onclick="obwod_kor()"><br><br>
+    <div style="color:red;font-size:50px;" id="nazwa"></div>
+    <input type="button" value="zamknij okno" onclick="okno_zamknij_korotkov()">
+</body>
+</html>
+    </textarea>
+    <input type="button" value="zamknij okno" onclick="okno_zamknij()"/>
+</body>
+</html>

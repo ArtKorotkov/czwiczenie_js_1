@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zadanie 24 kod Korotkov</title>
+    <script>
+        function okno_zamknij()
+            {
+                window.close()
+            }
+    </script>
+</head>
+<body>
+    <textarea cols="110" rows="33">
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Zadanie 24 Korotkov</title>
+    <script>function okno_zamknij_korotkov() { window.close(); }</script>
+</head>
+<body>
+    <script language="JavaScript">
+        var x1_kor = parseFloat(prompt("Podaj x1=", ""));
+        var x2_kor = parseFloat(prompt("Podaj x2=", ""));
+
+        document.write("wczytane liczby: x1=" + x1_kor 
+            + " &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; x2=" + x2_kor + "<br>");
+
+        var rad_kor = (x1_kor * Math.PI) / 180;
+        document.write("x1 w stopniach = " + x1_kor 
+            + " &nbsp;&nbsp; x1 w radianach = " + rad_kor.toFixed(2) + "<br>");
+
+        var y1_kor = x1_kor * Math.sin(rad_kor);
+        var y2_kor = x2_kor * Math.cos(rad_kor);
+        var y3_kor = Math.sqrt(Math.pow(x1_kor, 5) 
+            + 2 * Math.pow(x2_kor, 4)) * Math.abs(x1_kor - x2_kor);
+
+        document.write("y1 = " + y1_kor.toFixed(2) + "<br>");
+        document.write("y2 = " + y2_kor.toFixed(2) + "<br>");
+        document.write("y3 = " + y3_kor.toFixed(2) + "<br>");
+    </script>
+    <br>
+    <input type="button" value="zamknij okno" onclick="okno_zamknij_korotkov()">
+</body>
+</html>
+    </textarea>
+    <input type="button" value="zamknij okno" onclick="okno_zamknij()"/>
+</body>
+</html>

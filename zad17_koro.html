@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Zadanie 17 Korotkov</title>
+    <script>
+        function okno_zamknij_korotkov() {
+            window.close();
+        }
+    </script>
+    <style>
+        body { font-family: Arial; margin: 20px; }
+        .pytanie { font-weight: bold; text-decoration: underline; }
+        .odpowiedz { margin-left: 20px; margin-bottom: 15px; }
+        table { border-collapse: collapse; margin-left: 20px; }
+        th, td { border: 1px solid black; padding: 5px; }
+    </style>
+</head>
+<body>
+    <h1>Zadanie 17 - Teoria</h1>
+
+    <p class="pytanie">1. Wymień cztery sposoby wyprowadzania danych w JS.</p>
+    <p class="odpowiedz">
+        • z użyciem <b>document.write()</b><br>
+        • z użyciem okienka <b>alert()</b><br>
+        • do okienek <b>formularza</b><br>
+        • do <b>tabeli</b>
+    </p>
+
+    <p class="pytanie">2. Czym jest funkcja w JS, omów przy użyciu 4 podpunktów?</p>
+    <p class="odpowiedz">
+        • Jest to <b>zbiór zgrupowanych instrukcji</b>, które możemy uruchamiać poprzez podanie ich nazwy,<br>
+        • Każda funkcja po wywołaniu <b>wykonuje swój wewnętrzny kod</b>,<br>
+        • Funkcja może mieć <b>argumenty</b>, które wchodzą do wnętrza funkcji i są tam przetwarzane np. suma_kor(a, b),<br>
+        • Może (nie zawsze) <b>zwrócić obliczoną wartość</b> zapisaną po słowie kluczowym <b>return</b>.
+    </p>
+
+    <p class="pytanie">3. Omów metody getElementsByName, getElementById, getElementsByTagName (może być w postaci tabeli).</p>
+    <table>
+        <tr><th>Metoda</th><th>Opis</th></tr>
+        <tr><td>getElementById("id")</td><td>dostęp do wszystkich elementów o konkretnej wartości atrybutu <b>id</b></td></tr>
+        <tr><td>getElementsByTagName("znacznik")</td><td>dostęp do wszystkich elementów o typie znacznika, np. <b>P</b> lub <b>DIV</b></td></tr>
+        <tr><td>getElementsByName("nazwa")</td><td>dostęp do wszystkich elementów o konkretnej wartości atrybutu <b>name</b></td></tr>
+    </table>
+
+    <p class="pytanie">4. Omów właściwości innerHTML, innerText, className. (każdą osobno)</p>
+    <p class="odpowiedz">
+        <b>innerHTML</b> – jest to właściwość, która umożliwia odczyt, zmodyfikowanie, wstawienie, albo usunięcie kodu HTML z danego elementu HTML np. w tabeli.<br><br>
+        <b>innerText</b> – umożliwia określenie ciągu znaków który zostanie umieszczony w elemencie.<br><br>
+        <b>className</b> – umożliwia określenie klasy CSS użytej do prezentacji elementu.
+    </p>
+
+    <input type="button" value="zamknij okno" onclick="okno_zamknij_korotkov()">
+</body>
+</html>

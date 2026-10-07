@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zadanie 23 kod Korotkov</title>
+    <script>
+        function okno_zamknij()
+            {
+                window.close()
+            }
+    </script>
+</head>
+<body>
+    <textarea cols="110" rows="38">
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Zadanie 23 Korotkov</title>
+    <script type="text/javascript">
+        function dlugosc_kor(D, X) {
+            var d = parseFloat(D);
+            var x = parseFloat(X);
+            var dlugosc = Math.sqrt(d*d + x*x);
+            document.getElementById('wynik_dlugosc').value = dlugosc.toFixed(2) + " m";
+        }
+        function kat_kor(D, X) {
+            var d = parseFloat(D);
+            var x = parseFloat(X);
+            var rad = Math.atan(d / x);
+            var deg = rad * (180 / Math.PI);
+            document.getElementById('wynik_kat').value = deg.toFixed(2) + "°";
+        }
+        function okno_zamknij_korotkov() { window.close(); }
+    </script>
+</head>
+<body>
+    <h2>Drabina oparta o mur</h2>
+    <form>
+        Wysokość oparcia drabiny D: <input type="text" id="D_kor" size="6"><br><br>
+        Odległość oparcia drabiny X: <input type="text" id="X_kor" size="6"><br><br>
+        <input type="button" value="Oblicz długość drabiny" onclick="dlugosc_kor
+            (document.getElementById('D_kor').value, document.getElementById('X_kor').value)"><br><br>
+        <input type="button" value="Oblicz kąt nachylenia" onclick="kat_kor
+            (document.getElementById('D_kor').value, document.getElementById('X_kor').value)"><br><br>
+        Długość drabiny: <input type="text" id="wynik_dlugosc" size="15"><br><br>
+        Kąt nachylenia: <input type="text" id="wynik_kat" size="15"><br><br>
+    </form>
+    <input type="button" value="zamknij okno" onclick="okno_zamknij_korotkov()">
+</body>
+</html>
+    </textarea>
+    <input type="button" value="zamknij okno" onclick="okno_zamknij()"/>
+</body>
+</html>

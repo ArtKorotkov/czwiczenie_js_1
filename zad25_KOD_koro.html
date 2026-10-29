@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zadanie 25 kod Korotkov</title>
+    <script>
+        function okno_zamknij()
+            {
+                window.close()
+            }
+    </script>
+</head>
+<body>
+    <textarea cols="110" rows="28">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>function okno_zamknij_korotkov() { window.close(); }</script>
+</head>
+<body>
+    <script language="JavaScript">
+        var N0_kor = parseFloat(prompt("Podaj N0 = ",""));
+        var t_kor = parseFloat(prompt("Podaj czas = ",""));
+        var T_0_5_kor = parseFloat(prompt("Podaj okres połowicznego zaniku = ",""));
+
+        var lambda_kor = Math.LN2 / T_0_5_kor;
+        var N_kor = N0_kor * Math.pow(Math.E, -lambda_kor * t_kor);
+
+        document.write("N0 = " + N0_kor + " [sztuk]<br>")
+        document.write("t = " + t_kor + " [lat]<br>");
+        document.write("T1/2 = " + T_0_5_kor + " [lat]<br>");
+        document.write("Lambda = " + lambda_kor.toFixed(7) + " [1/rok]<br>");
+        document.write("N = " + N_kor.toFixed(7) + " [sztuk]<br>");
+    </script>
+    <br>
+    <input type="button" value="zamknij okno" onclick="okno_zamknij_korotkov()">
+</body>
+</html>
+    </textarea>
+    <input type="button" value="zamknij okno" onclick="okno_zamknij()"/>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zadanie 30 kod Korotkov</title>
+    <script>
+        function okno_zamknij()
+            {
+                window.close()
+            }
+    </script>
+</head>
+<body>
+    <textarea cols="110" rows="42">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zadanie 30 – Korotkov</title>
+    <script>
+        function okno_zamknij_korotkov() { window.close(); }
+    </script>
+</head>
+<body bgcolor="yellow">
+    <div style="color:green;font-size:46px;">
+        <script type="text/javascript">
+            var mebel = {
+                rodzaj: 'stół',
+                material: 'drewno',
+                kolor: 'brązowy',
+                mebel_wyswietl_korotkov: function ()
+                    {
+                        document.write("Dane obiektu rodzaj oraz material"+"<br>")
+                        document.write("Moje dane ==>"+this.rodzaj + " " + this.material)
+                    }
+            }
+            mebel.mebel_wyswietl_korotkov();
+        </script>
+    </div>
+    <br>
+    <div style="color:blue;font-size:48px;">
+        <br>
+        Obiekt to mebel<br>
+        pola:<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;rodzaj<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;material<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;kolor<br>
+        metoda: <br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;mebel_wyswietl_korotkov<br>
+    </div>
+    <br>
+    <input type="button" value="zamknij okno" onclick="okno_zamknij_korotkov()">
+</body>
+</html>
+    </textarea>
+    <input type="button" value="zamknij okno" onclick="okno_zamknij()"/>
+</body>
+</html>

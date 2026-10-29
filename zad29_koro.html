@@ -8,65 +8,120 @@
         function okno_zamknij_korotkov() { window.close(); }
     </script>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 30px;
-            line-height: 1.6;
+        *{
+            font-family: Arial;
         }
-        h1 {
-            text-align: center;
-            color: #000;
-        }
-        ol {
-            font-size: 18px;
+        h1{
             font-weight: bold;
         }
-        li {
-            margin-bottom: 15px;
-        }
-        .pytanie {
+        ol{
             font-weight: bold;
+            font-size: 20px;
         }
-        .odpowiedz {
+        ul, p{
             font-weight: normal;
-            color: #333;
+            list-style-type: disc;
+        }
+        #lista_numerowany{
+            list-style-type: decimal;
+        }
+        code{
+            background: #f2f2f2;
+            padding: 2px 6px;
+            border-radius: 4px;
         }
     </style>
 </head>
 <body>
-    <h1>Zadanie 29 – Obiekty w JavaScript</h1>
     <ol>
         <li>
-            <span class="pytanie">W jaki sposób można określić właściwości danego obiektu (dwa sposoby wraz z przykładami)?</span><br>
-            <span class="odpowiedz">Odpowiedź w PDF.</span>
+            W jaki sposób można określić właściwości danego obiektu (dwa sposoby wraz z przykładami)?
+            <p>Właściwości obiektu można określić dwoma sposobami:<br>
+            1. Za pomocą literału obiektu:<br>
+            <code>var mebel = { rodzaj: "stół", material: "drewno", kolor: "brązowy" };</code><br>
+            2. Za pomocą konstruktora i słowa kluczowego <code>new</code>:<br>
+            <code>function Mebel(rodzaj, material, kolor) {<br>
+                this.rodzaj = rodzaj;<br>
+                this.material = material;<br>
+                this.kolor = kolor;<br>
+            }<br>
+            var mebel1 = new Mebel("stół", "drewno", "brązowy");</code></p>
         </li>
         <li>
-            <span class="pytanie">W jaki sposób można odwołać się do pól (właściwości) i metod?</span><br>
-            <span class="odpowiedz">Odpowiedź w PDF.</span>
+            W jaki sposób można odwołać się do pól (właściwości) i metod?
+            <p>Do pól i metod odwołujemy się przez nazwę obiektu i kropkę:<br>
+            <code>mebel.rodzaj</code> – odwołanie do pola<br>
+            <code>mebel.pokaz()</code> – wywołanie metody<br>
+            Można też użyć zapisu tablicowego:<br>
+            <code>mebel["rodzaj"]</code> i <code>mebel["pokaz"]()</code>.</p>
         </li>
         <li>
-            <span class="pytanie">Wymień cechy charakterystyczne konstruktora.</span><br>
-            <span class="odpowiedz">Odpowiedź w PDF.</span>
+            Wymień cechy charakterystyczne konstruktora.
+            <p>Konstruktor:<br>
+            - jest to specjalna funkcja służąca do tworzenia obiektów,<br>
+            - zwykle ma nazwę zaczynającą się od wielkiej litery,<br>
+            - przyjmuje argumenty, które są przypisywane do pól obiektu,<br>
+            - używa słowa kluczowego <code>this</code>, aby przypisać wartości do tworzonego obiektu,<br>
+            - tworzy wiele obiektów o podobnej strukturze.</p>
         </li>
         <li>
-            <span class="pytanie">Konstruowanie obiektu na podstawie przykładu – obiekt ma trzy pola oraz jedną metodę.</span><br>
-            <span class="odpowiedz">Odpowiedź w PDF.</span>
+            Konstruowanie obiektu na podstawie przykładu – obiekt ma trzy pola oraz jedną metodę.
+            <p><code>var mebel = {<br>
+                rodzaj: "stół",<br>
+                material: "drewno",<br>
+                kolor: "brązowy",<br>
+                pokaz: function() {<br>
+                    document.write(this.rodzaj + "<br>");<br>
+                    document.write(this.material + "<br>");<br>
+                    document.write(this.kolor);<br>
+                }<br>
+            };</code><br>
+            Obiekt ten ma trzy pola: <code>rodzaj</code>, <code>material</code>, <code>kolor</code> oraz jedną metodę: <code>pokaz</code>.</p>
         </li>
         <li>
-            <span class="pytanie">Znaczenie słowa this. Jak oddzielamy pola oraz metody?</span><br>
-            <span class="odpowiedz">Odpowiedź w PDF.</span>
+            Znaczenie słowa <b>this</b>. Jak oddzielamy pola oraz metody?
+            <p><code>this</code> oznacza obiekt, w którym aktualnie pracujemy. Dzięki temu metoda może odwołać się do pól tego samego obiektu.<br>
+            Przykład:<br>
+            <code>this.rodzaj</code>, <code>this.material</code>, <code>this.kolor</code><br>
+            Pola i metody w obiekcie oddzielamy przecinkami, a ciało metody zapisujemy w nawiasach klamrowych.</p>
         </li>
         <li>
-            <span class="pytanie">Konstruktor w JS na podstawie przykładu wraz z opisem.</span><br>
-            <span class="odpowiedz">Odpowiedź w PDF.</span>
+            Konstruktor w JS na podstawie przykładu wraz z opisem.
+            <p><code>function Mebel(rodzaj, material, kolor) {<br>
+                this.rodzaj = rodzaj;<br>
+                this.material = material;<br>
+                this.kolor = kolor;<br>
+                this.pokaz = function() {<br>
+                    document.write(this.rodzaj + "<br>");<br>
+                    document.write(this.material + "<br>");<br>
+                    document.write(this.kolor + "<br>");<br>
+                }<br>
+            }<br>
+            var mebel1 = new Mebel("stół", "drewno", "brązowy");</code><br>
+            Konstruktor jest wzorcem, z którego tworzymy wiele obiektów o podobnych właściwościach. Każdy nowy obiekt otrzymuje własne pola i metodę.</p>
         </li>
         <li>
-            <span class="pytanie">Znaczenie słowa kluczowego New wraz z przykładem.</span><br>
-            <span class="odpowiedz">Odpowiedź w PDF.</span>
+            Znaczenie słowa kluczowego <b>new</b> wraz z przykładem.
+            <p><code>new</code> tworzy nowy obiekt na podstawie konstruktora. Dzięki temu zostają zainicjalizowane pola obiektu.<br>
+            Przykład:<br>
+            <code>var mebel2 = new Mebel("krzesło", "metal", "czarny");</code><br>
+            Po użyciu <code>new</code> JavaScript tworzy nowy obiekt i przekazuje argumenty do konstruktora.</p>
         </li>
         <li>
-            <span class="pytanie">Znaczenie słowa kluczowego prototype wraz z przykładem i opisem (szczególnie ważny tekst pogrubiony).</span><br>
-            <span class="odpowiedz">Odpowiedź w PDF.</span>
+            Znaczenie słowa kluczowego <b>prototype</b> wraz z przykładem i opisem (szczególnie ważny tekst pogrubiony).
+            <p><code>prototype</code> pozwala dodać wspólne metody i właściwości do wszystkich obiektów utworzonych z danego konstruktora.<br>
+            Przykład:<br>
+            <code>function Mebel(rodzaj, material, kolor) {<br>
+                this.rodzaj = rodzaj;<br>
+                this.material = material;<br>
+                this.kolor = kolor;<br>
+            }<br>
+            Mebel.prototype.pokaz = function() {<br>
+                document.write(this.rodzaj + "<br>");<br>
+                document.write(this.material + "<br>");<br>
+                document.write(this.kolor);<br>
+            };</code><br>
+            <b>Metody i właściwości zapisane w <code>prototype</code> są wspólne dla wszystkich obiektów utworzonych z konstruktora, dzięki czemu nie są duplikowane w każdym obiekcie osobno.</b></p>
         </li>
     </ol>
     <br>

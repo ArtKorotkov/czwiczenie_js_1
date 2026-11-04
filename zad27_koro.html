@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zadanie 27 Korotkov</title>
+    <script type="text/javascript">
+        function wysokosc_korotkov(s_tekst, odl_tekst) {
+            var s = parseFloat(s_tekst);
+            var odl = parseFloat(odl_tekst);
+            
+            var h = Math.sqrt(Math.pow(s, 2) - Math.pow(odl, 2));
+            
+            document.getElementById('wynik_h').value = h.toFixed(2) + " m";
+        }
+
+        function kat_korotkov(s_tekst, odl_tekst) {
+            var s = parseFloat(s_tekst);
+            var odl = parseFloat(odl_tekst);
+            
+            var rad = Math.acos(odl / s);
+            var deg = rad * (180 / Math.PI); 
+            
+            document.getElementById('wynik_kat').value = deg.toFixed(2) + "°";
+        }
+
+        function okno_zamknij_korotkov() { 
+            window.close(); 
+        }
+    </script>
+</head>
+<body>
+        <h2>Obliczanie wysokości i kąta startu samolotu</h2>
+    <form>
+        Odległość Artur - Dawid (odl): <input type="text" id="odl_koro" size="6"><br><br>
+        Droga przebyta przez samolot (s): <input type="text" id="s_koro" size="6"><br><br>
+        
+        <input type="button" value="Oblicz wysokość" onclick="wysokosc_korotkov(document.getElementById('s_koro').value, 
+        document.getElementById('odl_koro').value)"><br><br>
+        <input type="button" value="Oblicz kąt startu" onclick="kat_korotkov(document.getElementById('s_koro').value, 
+        document.getElementById('odl_koro').value)"><br><br>
+        
+        Wysokość (h): <input type="text" id="wynik_h" size="15"><br><br>
+        Kąt startu: <input type="text" id="wynik_kat" size="15"><br><br>
+    </form>
+    <input type="button" value="zamknij okno" onclick="okno_zamknij_korotkov()">
+</body>
+</html>

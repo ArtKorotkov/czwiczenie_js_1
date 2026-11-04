@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zadanie 26 kod Korotkov</title>
+    <script>
+        function okno_zamknij()
+            {
+                window.close()
+            }
+    </script>
+</head>
+<body>
+    <textarea cols="130" rows="63">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zadanie 26 Korotkov</title>
+        <script type="text/javascript">
+        function Pow_korotkov(a_tekst, b_tekst, h_tekst) {
+            var a = parseFloat(a_tekst);
+            var b = parseFloat(b_tekst);
+            var h = parseFloat(h_tekst);
+            var pole = ((a + b) * h) / 2;
+            
+            document.getElementById('wynik_pole').value = pole.toFixed(2) + " cm2";
+            
+            var okno = window.open("", "WynikiPole", "width=250,height=150,top=200,left=810");
+            okno.document.write("<center><h3>Pole trapezu:</h3>" + pole.toFixed(2) + " cm<sup>2</sup></center>");
+            okno.document.write("<br><center><input type='button' value='Zamknij' onclick='window.close()'></center>");
+        }
+
+        function Obw_korotkov(a_tekst, b_tekst, h_tekst) {
+            var a = parseFloat(a_tekst);
+            var b = parseFloat(b_tekst);
+            var h = parseFloat(h_tekst);
+            
+            var roznica = Math.abs(a - b) / 2;
+            
+            var ramie = Math.sqrt(Math.pow(roznica, 2) + Math.pow(h, 2));
+            
+            var obwod = a + b + 2 * ramie;
+            
+            document.getElementById('wynik_obwod').value = obwod.toFixed(2) + " cm";
+            
+            var okno = window.open("", "WynikiObwod", "width=250,height=150,top=440,left=810");
+            okno.document.write("<center><h3>Obwód trapezu:</h3>" + obwod.toFixed(2) + " cm</center>");
+            okno.document.write("<br><center><input type='button' value='Zamknij' onclick='window.close()'></center>");
+        }
+
+        function okno_zamknij_korotkov() { 
+            window.close(); 
+        }
+    </script>
+</head>
+<body>
+    <h2>Pole i obwód trapezu równoramiennego</h2>
+    <form>
+        Górna podstawa a: <input type="text" id="a_koro" size="6"><br><br>
+        Dolna podstawa b: <input type="text" id="b_koro" size="6"><br><br>
+        Wysokość h: <input type="text" id="h_koro" size="6"><br><br>
+        
+        <input type="button" value="Oblicz pole" onclick="Pow_korotkov(document.getElementById('a_koro').value, 
+        document.getElementById('b_koro').value, document.getElementById('h_koro').value)"><br><br>
+        <input type="button" value="Oblicz obwód" onclick="Obw_korotkov(document.getElementById('a_koro').value, 
+        document.getElementById('b_koro').value, document.getElementById('h_koro').value)"><br><br>
+        
+        Pole trapezu: <input type="text" id="wynik_pole" size="15"><br><br>
+        Obwód trapezu: <input type="text" id="wynik_obwod" size="15"><br><br>
+    </form>
+    <input type="button" value="zamknij okno" onclick="okno_zamknij_korotkov()">
+    </form>
+</body>
+</html>
+    </textarea>
+    <input type="button" value="zamknij okno" onclick="okno_zamknij()"/>
+</body>
+</html>

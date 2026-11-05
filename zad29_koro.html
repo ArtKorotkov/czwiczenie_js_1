@@ -58,7 +58,7 @@
         </li>
         <li>
             Konstruowanie obiektu na podstawie przykładu &rarr; obiekt ma trzy pola oraz jedną metodę.<br>
-            <textarea rows="9" cols="40">
+            <textarea rows="9" cols="60">
 var osoba_1 = {
     nazwisko : 'Kowalski',
     imie : 'Jan',
@@ -80,7 +80,7 @@ var osoba_1 = {
                 <u>zawod</u> oraz metodą <u>wypisz()</u>. Właściwościom obiektu zostały przypisane wartości parametrów. 
                 Użyte słowo kluczowe <u>this</u> odnosi się do aktualnego obiektu i pozwala na przypisanie wartości 
                 parametru do odpowiedniego pola tego obiektu.</p>
-            <textarea rows="9" cols="40">
+            <textarea rows="9" cols="60">
 function klient(nazwisko_k, imie_k, zawod_k) {
     this.nazwisko=nazwisko_k;
     this.imie=imie_k;
@@ -94,7 +94,7 @@ function klient(nazwisko_k, imie_k, zawod_k) {
         <li>
             Znaczenie słowa kluczowego <u>New</u> wraz z przykładem.
             <p>Do utworzenia nowego obiektu na podstawie konstruktora stosowane jest słowo kluczowe <u>new</u>.</p>
-            <textarea rows="3" cols="40">
+            <textarea rows="3" cols="60">
 var osoba1 = new klient('Kowalski', 'Jan', 'kierowca');
 var osoba2 = new klient('Nowak', 'Anna', 'sekretarka');
             </textarea>                
@@ -105,7 +105,7 @@ var osoba2 = new klient('Nowak', 'Anna', 'sekretarka');
             <p>Do definiowania metod i właściwości dla obiektu jest wykorzystywana właściwość <u>prototype</u>.<br>
                 Właściwość <u>prototype</u> może byd również wykorzystana do dodawania dodatkowych
                 metod lub właściwości do istniejących obiektów.</p>
-            <textarea rows="11" cols="40">
+            <textarea rows="11" cols="60">
 function klient() {
     this.nazwisko='Bielski';
     this.imie='Paweł';

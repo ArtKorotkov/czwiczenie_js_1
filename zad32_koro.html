@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pl">
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zadanie 32 – Korotkov</title>
+    <script>
+        function okno_zamknij_korotkov() { window.close(); }
+    </script>
+</head>
+<body bgcolor="silver">
+    <div style="color:navy;font-size:50px;">
+        <script type="text/javascript">
+            function mebel(rodzaj_m,material_m,kolor_m) //początek konstruktora
+            {
+                this.rodzaj=rodzaj_m;
+                this.material=material_m;
+                this.kolor=kolor_m;
+            } //koniec konstruktora
+            mebel.prototype.wypisz = function () //definicja metody
+            {
+                alert(this.rodzaj + " " + this.material + " " + this.kolor);
+            };
+            var mebel1 = new mebel("stół", "drewno", "brązowy"); // nowy obiekt mebel1
+            var mebel2 = new mebel("krzesło", "metal", "czarny"); // nowy obiekt mebel2
+            mebel1.wypisz(); // uruchomienie metody wypisz() dotyczącej mebla1 z użyciem alert();
+            mebel2.wypisz(); // uruchomienie metody wypisz() dotyczącej mebla2 z użyciem alert();
+            document.write("Moje nazwisko to KOROTKOV mam numer 7 a obiekt to mebel"+"<br>");
+            document.write("dostęp do pól mebel1 i mebel2"+"<br>");
+            document.write("czyli wypisanie danych"+"<br>");
+// poniżej dostęp/wypisanie danych do pól mebla1 i mebla2
+            document.write("mebel pierwszy =>"+" "+mebel1.rodzaj+" "+mebel1.material+" "+mebel1.kolor+"<br>");
+            document.write("mebel drugi  =>"+" "+mebel2.rodzaj+" "+mebel2.material+" "+mebel2.kolor+"<br>");
+        </script>
+    </div>
+    <div style="color:red;font-size:30px;"><br>
+        programowanie obiektowe:<br>
+        Słowo kluczowe prototype stosowane jest do:<br>
+        dodawania nowych metod (lub właściwości) do już istniejącego konstruktora – dzięki temu wszystkie obiekty<br>
+        utworzone tym konstruktorem (np. mebel1, mebel2) mają dostęp do tej samej metody wypisz() bez potrzeby<br>
+        wpisywania jej w każdym obiekcie osobno. Oszczędza to pamięć i pozwala na wspólną definicję zachowania<br>
+        Słowo kluczowe new stosowane jest do:<br>
+        tworzenia nowej instancji (nowego obiektu) na podstawie konstruktora, np. new mebel("stół","drewno","brązowy")<br>
+        – powoduje wywołanie konstruktora, utworzenie nowego obiektu oraz przypisanie do jego pól wartości przekazanych<br>
+        w argumentach. Wynik zapisujemy w zmiennej (np. mebel1, mebel2)<br>
+    </div>
+    <br>
+    <input type="button" value="zamknij okno" onclick="okno_zamknij_korotkov()">
+</body>
+</html>
+<!-- Artem Korotkov Zadanie 32_JS -->

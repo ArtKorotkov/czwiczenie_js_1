@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="wi""dth=device-width, initial-scale=1.0">
+    <title>Zadanie 31 – Korotkov</title>
+    <script>
+        function okno_zamknij_korotkov() { window.close(); }
+    </script>
+</head>
+<body bgcolor="lightblue">
+    <div style="color:red;font-size:51px;">
+        <script type="text/javascript">
+            var mebel = {
+                rodzaj: 'stół',
+                material: 'drewno',
+                kolor: 'brązowy',
+                mebel_pokaz_korotkov: function ()
+                    {
+                        document.write("Dane obiektu rodzaj oraz material"+"<br>")
+                        document.write("Moje dane ==>"+this.rodzaj + " " + this.material)
+                    }
+            }
+            mebel.mebel_pokaz_korotkov();
+            mebel.wiek=5;
+            mebel.wypisz_korotkov=function() {alert("Wiek: " + this.wiek + " lat")}
+            mebel.wypisz_korotkov();
+
+        </script>
+    </div>
+    <br>
+    <div style="color:blue;font-size:53px;">
+        <br>
+        Mój numer w dzienniku jest 7 i moje dane to:<br>
+        Obiekt to mebel<br>
+        pola:<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Rodzaj<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Material<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Kolor<br>
+        metoda: <br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;mebel_pokaz_korotkov();<br>
+        ==============================================<br>
+        nowe pole to wiek dla obiektu mebel wartość pola to 5<br>
+        nowa defincja metoda to wypisz_korotkov(); z użyciem alert();<br>
+        użycie metody wypisz_korotkov();
+    <div>
+    <br>
+    <input type="button" value="zamknij okno" onclick="okno_zamknij_korotkov()">
+</body>
+</html>
+<!-- Artem Korotkov Zadanie 31_JS -->
